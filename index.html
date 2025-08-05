@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Akey - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2d5a87 0%, #1e3a5f 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .resume-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #e74c3c, #f39c12, #27ae60, #3498db);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 40px;
+            height: 4px;
+            background: linear-gradient(90deg, #e74c3c, #f39c12);
+            border-radius: 2px;
+        }
+        
+        .job {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8faff;
+            border-radius: 15px;
+            border-left: 4px solid #e74c3c;
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .job:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .job-company {
+            font-size: 1.1rem;
+            color: #e74c3c;
+            font-weight: 500;
+        }
+        
+        .job-duration {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .job-location {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .job-description ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .job-description li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .job-description li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-size: 12px;
+        }
+        
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        
+        .education-item {
+            background: #f8faff;
+            padding: 25px;
+            border-radius: 15px;
+            border-top: 4px solid #27ae60;
+        }
+        
+        .education-school {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .degree {
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+        
+        .skill-category:hover {
+            transform: scale(1.05);
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .cert-item {
+            background: #f8faff;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #3498db;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .cert-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .cert-details h4 {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .cert-exp {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .volunteer-section {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .volunteer-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .volunteer-description ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .volunteer-description li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .volunteer-description li::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+            }
+            
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+        }
+        
+        @page {
+            margin: 0.5in;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .job:hover {
+                transform: none;
+                box-shadow: none;
+            }
+            
+            .skill-category:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1>Mike Akey</h1>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <span>480-253-8544</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <span>mike.akey6@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <span>Scottsdale, AZ</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Work Experience</h2>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Sr. Product Manager - Design Time Canvas</div>
+                            <div class="job-title">Product Manager - Designer Desktop</div>
+                            <div class="job-company">Alteryx</div>
+                            <div class="job-location">Remote - AZ</div>
+                        </div>
+                        <div class="job-duration">July 2022 - Present</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Owns the vision, roadmap, and execution for Alteryx's flagship product; Designer Desktop and the hybrid experience integrating with Alteryx One's cloud strategy.</li>
+                            <li>Define and execute GTM strategy across product, sales, and marketing driving alignment on positioning, pricing, and packaging for both on-prem and cloud-connected offerings.</li>
+                            <li>Leverage usage data, UX research, customer feedback to improve Alteryx products and influence roadmap decisions.</li>
+                            <li>Mentor junior PMs and members of cross-functional teams across engineering, UX, and product marketing.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Sr. Program Manager - User Experience</div>
+                            <div class="job-company">Alteryx</div>
+                            <div class="job-location">Remote - AZ</div>
+                        </div>
+                        <div class="job-duration">May 2020 - July 2022</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Supported 50+ UX team members by managing cross-functional planning, consolidating project tracking systems into Jira, and reporting on OKR-aligned progress.</li>
+                            <li>Served as interim Product Manager for key initiatives, including Designer Desktop FIPS (2022) and Core Experience MUI components (2020–2021), driving delivery of critical platform features.</li>
+                            <li>Led UX integration efforts for acquired products and acted as subject matter expert for both Alteryx and Trifacta platforms, enhancing design cohesion across the suite.</li>
+                            <li>Partnered with Product and UX leadership to scope initiatives, analyze usage data to inform design strategy, and deliver internal training on product knowledge and processes.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Technical Product Manager - Tech Writing</div>
+                            <div class="job-company">Alteryx</div>
+                            <div class="job-location">Remote - AZ</div>
+                        </div>
+                        <div class="job-duration">Oct 2018 - May 2020</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Led cross-functional coordination between Product, Engineering, Tech Writing, and Customer teams to drive end-to-end feature delivery aligned with the product roadmap.</li>
+                            <li>Prioritized and managed the tech writing backlog, accepting user stories, and ensuring timely, high-quality documentation across multiple product areas.</li>
+                            <li>Owned and analyzed telemetry and usage data for Help content and in-product samples, using insights to inform strategic content and product decisions.</li>
+                            <li>Developed automated processes to streamline documentation workflows and supported PCM teams with content creation and sample content delivery.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Product Content Manager</div>
+                            <div class="job-company">Alteryx</div>
+                            <div class="job-location">Remote - AZ</div>
+                        </div>
+                        <div class="job-duration">May 2017 - Oct 2018</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Created and maintained in-product sample content and curated workflows to guide users in learning the Alteryx platform.</li>
+                            <li>Partnered with Product, UX, Engineering, and Tech Writing teams to design intuitive, well-documented product experiences.</li>
+                            <li>Supported global content strategy through localization efforts across eight languages and reviewed Alteryx Starter Kits for quality and clarity.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Customer Support Engineer</div>
+                            <div class="job-company">Alteryx</div>
+                            <div class="job-location">Chicago, IL/Remote - AZ</div>
+                        </div>
+                        <div class="job-duration">Mar 2014 - May 2017</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Resolved complex technical issues across Alteryx products, collaborating cross-functionally to identify bugs and deliver timely solutions.</li>
+                            <li>Streamlined internal workflows by automating ticket assignment and enhancing onboarding/training processes for new support hires.</li>
+                            <li>Mentored support engineers and authored knowledge base content to empower users and strengthen community engagement.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">GIS Technician</div>
+                            <div class="job-company">CBRE</div>
+                            <div class="job-location">Phoenix, AZ</div>
+                        </div>
+                        <div class="job-duration">Sept 2011 - Mar 2014</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Created advanced, visually compelling maps using demographic, geographic, and market data to support sales and strategic decision-making.</li>
+                            <li>Collaborated with sales and leadership to gather requirements, analyze large datasets, and present insights through GIS tools and visualizations.</li>
+                            <li>Maintained and enhanced market data assets, leveraging Adobe Illustrator and Photoshop to improve clarity and impact of deliverables.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="volunteer-section">
+                <div class="volunteer-title">Volunteer Work</div>
+                <div><strong>MAS-GIS Capstone Group Project for St. Mary's Food Bank</strong> | Phoenix, AZ | Sept 2012 - Aug 2013</div>
+                <div class="volunteer-description">
+                    <ul>
+                        <li>Built a geodatabase by integrating tabular data and shapefiles to support service planning and delivery.</li>
+                        <li>Developed an automated tool using ModelBuilder to identify underserved areas in need of food bank services.</li>
+                        <li>Created a web mapping application for the organization's website, enabling users to easily locate nearby food resources.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="education-school">Arizona State University</div>
+                        <div style="display: flex; gap: 30px;">
+                            <div style="flex: 1;">
+                                <div class="degree">Masters of Advanced Study in GIS</div>
+                                <div style="color: #666; margin-bottom: 15px;">August 2013</div>
+                            </div>
+                            <div style="flex: 1;">
+                                <div class="degree">B.S. Geography: Urban Studies</div>
+                                <div class="degree">GIS Certificate</div>
+                                <div style="color: #666;">December 2009</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="cert-item">
+                        <div class="cert-icon">A</div>
+                        <div class="cert-details">
+                            <h4>Alteryx Designer Core Certification</h4>
+                            <div class="cert-exp">Expires March 2026</div>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">C</div>
+                        <div class="cert-details">
+                            <h4>CSPO</h4>
+                            <div class="cert-exp">Expires February 2027</div>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">P</div>
+                        <div class="cert-details">
+                            <h4>PCM Level 1</h4>
+                            <div class="cert-exp">Issued July 2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Skills & Proficiencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-title">Product Management</div>
+                        <div>Product Lifecycle Management, Roadmap Development, GTM Strategy</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">User Research & Testing</div>
+                        <div>Customer Discovery, User Research, A/B Testing, Experiment Design</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Analytics & KPIs</div>
+                        <div>Metrics Definition, KPI Ownership, Alteryx One, Power BI, Tableau, Google Analytics</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Data & Development</div>
+                        <div>ETL Concepts, SQL, Visual Studio Code, APIs, Postman</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Agile Methodologies</div>
+                        <div>Agile, Scrum, Kanban, Sprint Planning, Backlog Grooming</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Leadership & Communication</div>
+                        <div>Cross-Functional Team Leadership, Stakeholder Alignment, Executive Communication</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Cloud Platforms</div>
+                        <div>Various cloud data platforms</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Project Management</div>
+                        <div>Atlassian, Aha!, Asana, Smartsheets, GitLab</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Design & UX</div>
+                        <div>Figma, Invision, Lucid Chart, Adobe Creative Suite</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Business Tools</div>
+                        <div>Salesforce, SharePoint, Quip</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
