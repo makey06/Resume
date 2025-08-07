@@ -20,6 +20,7 @@
             background: linear-gradient(135deg, #2d5a87 0%, #1e3a5f 100%);
             min-height: 100vh;
             padding: 20px;
+            position: relative;
         }
         
         .resume-container {
@@ -323,6 +324,36 @@
             color: #fff;
         }
         
+        .navigation {
+            position: fixed !important;
+            bottom: 30px !important;
+            right: 30px !important;
+            z-index: 9999 !important;
+            pointer-events: auto;
+            transform: none !important;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 10000;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(231, 76, 60, 0.4);
+        }
+        
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2.2rem;
@@ -344,6 +375,16 @@
             .content {
                 padding: 25px;
             }
+            
+            .navigation {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .nav-button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
         }
         
         @page {
@@ -359,6 +400,10 @@
             .resume-container {
                 box-shadow: none;
                 border-radius: 0;
+            }
+            
+            .navigation {
+                display: none;
             }
             
             .job:hover {
@@ -614,6 +659,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="navigation">
+        <a href="https://makey06.github.io/Accomplishments/" class="nav-button">
+            Additional Accomplishments
+        </a>
     </div>
 </body>
 </html>
