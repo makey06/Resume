@@ -24,7 +24,7 @@
         }
         
         .resume-container {
-            max-width: 850px;
+            max-width: 978px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -331,6 +331,10 @@
             z-index: 9999 !important;
             pointer-events: auto;
             transform: none !important;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-end;
         }
         
         .nav-button {
@@ -347,6 +351,8 @@
             gap: 10px;
             position: relative;
             z-index: 10000;
+            white-space: nowrap;
+            width: fit-content;
         }
         
         .nav-button:hover {
@@ -661,6 +667,9 @@
         </div>
     </div>
     <div class="navigation">
+        <a href="https://makey06.github.io/Cover-Letter/" class="nav-button">
+            My Cover Letter
+        </a>
         <a href="https://makey06.github.io/Accomplishments/" class="nav-button">
             Additional Accomplishments
         </a>
