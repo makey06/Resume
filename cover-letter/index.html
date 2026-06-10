@@ -108,6 +108,27 @@
                 text-align: left;
             }
         }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0 25px 0;
+            flex-wrap: wrap;
+        }
+        .navigation a {
+            color: #fff;
+            background: #000;
+            text-decoration: none;
+            padding: 6px 18px;
+            border-radius: 3px;
+            font-size: 10pt;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            transition: background 0.2s;
+        }
+        .navigation a:hover { background: #333; }
+        .navigation a.active { background: #555; }
     </style>
 </head>
 <body>
