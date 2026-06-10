@@ -1,2 +1,33 @@
-# Resume
-My Resume!
+# Mike Akey — Personal Portfolio Site
+
+A GitHub Pages site hosting my professional documents, built with plain HTML and deployed automatically via GitHub Actions.
+
+## Live Site
+
+| Page | URL |
+|------|-----|
+| Resume | https://makey06.github.io/Resume/ |
+| Cover Letter | https://makey06.github.io/Resume/cover-letter/ |
+| Accomplishments | https://makey06.github.io/Resume/accomplishments/ |
+
+## Structure
+
+```
+/
+├── index.html              # Resume
+├── cover-letter/
+│   └── index.html          # Cover letter
+├── accomplishments/
+│   └── index.html          # Key accomplishments & impact
+└── .github/
+    └── workflows/
+        └── deploy.yml      # Auto-deploys to GitHub Pages on push to main
+```
+
+## Deployment
+
+Any push to `main` automatically triggers a GitHub Actions workflow that deploys the latest version to GitHub Pages. No build step required — the site is plain HTML/CSS.
+
+## About
+
+Senior Product Manager with 10+ years at Alteryx, spanning Customer Support, UX, and Product. Based in Scottsdale, AZ.
