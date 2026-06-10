@@ -39,7 +39,6 @@ Senior Product Manager with 10+ years at Alteryx, spanning Customer Support, UX,
 | Repo | Description |
 |------|-------------|
 | [Fun-WIP](https://github.com/makey06/Fun-WIP) | Fun side projects and idea dumping ground |
-| [Resume](https://github.com/makey06/Resume) | My Resume! |
 <!-- REPOS_END -->
 
 *This section is automatically updated daily by GitHub Actions.*
