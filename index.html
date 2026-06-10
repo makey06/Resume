@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,6 +52,34 @@
         .contact-info span:first-child::before {
             content: '';
             margin-right: 0;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .navigation a {
+            color: #fff;
+            background: #000;
+            text-decoration: none;
+            padding: 6px 18px;
+            border-radius: 3px;
+            font-size: 10pt;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            transition: background 0.2s;
+        }
+
+        .navigation a:hover {
+            background: #333;
+        }
+
+        .navigation a.active {
+            background: #555;
         }
         
         .section {
@@ -207,49 +234,18 @@
             content: ': ';
         }
         
-        .navigation {
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid #ccc;
-            text-align: center;
-            font-size: 10pt;
-        }
-        
-        .navigation a {
-            color: #0066cc;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        
-        .navigation a:hover {
-            text-decoration: underline;
-        }
-        
         @media print {
-            body {
-                padding: 0;
-            }
-            
-            .navigation {
-                display: none;
-            }
+            body { padding: 0; }
+            .navigation { display: none; }
         }
         
         @media (max-width: 768px) {
-            body {
-                padding: 20px;
-            }
-            
+            body { padding: 20px; }
             .job-header,
             .education-header,
-            .volunteer-header {
-                flex-direction: column;
-            }
-            
+            .volunteer-header { flex-direction: column; }
             .job-duration,
-            .education-date {
-                margin-top: 2px;
-            }
+            .education-date { margin-top: 2px; }
         }
     </style>
 </head>
@@ -262,6 +258,12 @@
             <span>Scottsdale, AZ</span>
         </div>
     </div>
+
+    <nav class="navigation">
+        <a href="../index.html" class="active">Resume</a>
+        <a href="../cover-letter/index.html">Cover Letter</a>
+        <a href="../accomplishments/index.html">Accomplishments</a>
+    </nav>
     
     <div class="section">
         <h2 class="section-title">Professional Experience</h2>
