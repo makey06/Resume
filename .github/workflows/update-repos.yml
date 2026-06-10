@@ -1,0 +1,69 @@
+name: Update Repos List
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update Other Projects in README
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - << 'PYEOF'
+          import urllib.request, json, re, os
+
+          token = os.environ["GH_TOKEN"]
+          headers = {"Authorization": f"Bearer {token}"}
+
+          req = urllib.request.Request(
+              "https://api.github.com/users/makey06/repos?per_page=100&type=public",
+              headers=headers
+          )
+          with urllib.request.urlopen(req) as resp:
+              repos = json.loads(resp.read())
+
+          repos = [r for r in repos if r["name"] != "Resume"]
+          repos.sort(key=lambda r: r.get("updated_at", ""), reverse=True)
+
+          rows = ["| Repo | Description |", "|------|-------------|"]
+          for r in repos:
+              name = r["name"]
+              url = r["html_url"]
+              desc = r.get("description") or "(no description)"
+              rows.append(f"| [{name}]({url}) | {desc} |")
+
+          table = "\n".join(rows)
+
+          with open("README.md", "r") as f:
+              content = f.read()
+
+          new_content = re.sub(
+              r"<!-- REPOS_START -->.*?<!-- REPOS_END -->",
+              f"<!-- REPOS_START -->\n{table}\n<!-- REPOS_END -->",
+              content,
+              flags=re.DOTALL
+          )
+
+          with open("README.md", "w") as f:
+              f.write(new_content)
+
+          print("README updated successfully")
+          PYEOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "Auto-update: refresh Other Projects list"
+          git push
