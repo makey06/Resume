@@ -8,7 +8,6 @@ A GitHub Pages site hosting my professional documents, built with plain HTML and
 |------|-----|
 | Resume | https://makey06.github.io/Resume/ |
 | Cover Letter | https://makey06.github.io/Resume/cover-letter/ |
-| Accomplishments | https://makey06.github.io/Resume/accomplishments/ |
 
 ## Structure
 
@@ -17,8 +16,6 @@ A GitHub Pages site hosting my professional documents, built with plain HTML and
 ├── index.html              # Resume
 ├── cover-letter/
 │   └── index.html          # Cover letter
-├── accomplishments/
-│   └── index.html          # Key accomplishments & impact
 └── .github/
     └── workflows/
         ├── deploy.yml          # Auto-deploys to GitHub Pages on push to main
