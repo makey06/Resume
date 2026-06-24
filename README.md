@@ -1,4 +1,4 @@
-# Mike Akey — Personal Portfolio Site
+# Mike Akey: Personal Portfolio Site
 
 A GitHub Pages site hosting my professional documents, built with plain HTML and deployed automatically via GitHub Actions.
 
@@ -24,7 +24,7 @@ A GitHub Pages site hosting my professional documents, built with plain HTML and
 
 ## Deployment
 
-Any push to `main` automatically triggers a GitHub Actions workflow that deploys the latest version to GitHub Pages. No build step required — the site is plain HTML/CSS.
+Any push to `main` automatically triggers a GitHub Actions workflow that deploys the latest version to GitHub Pages. No build step required, as the site is plain HTML/CSS.
 
 ## About
 
