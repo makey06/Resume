@@ -35,8 +35,8 @@ Senior Product Manager with 10+ years at Alteryx, spanning Customer Support, UX,
 <!-- REPOS_START -->
 | Repo | Description |
 |------|-------------|
-| [SummerScholar](https://github.com/makey06/SummerScholar) | An interactive summer learning web app for kindergarten readiness, covering sight words, spelling, counting, and more |
 | [Fun-WIP](https://github.com/makey06/Fun-WIP) | Fun side projects and idea dumping ground |
+| [SummerScholar](https://github.com/makey06/SummerScholar) | An interactive summer learning web app for kindergarten readiness, covering sight words, spelling, counting, and more |
 <!-- REPOS_END -->
 
 *This section is automatically updated daily by GitHub Actions.*
