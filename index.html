@@ -54,6 +54,13 @@
             margin-right: 0;
         }
         
+        .headline {
+            font-size: 11pt;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 6px;
+        }
+        
         .navigation {
             display: flex;
             justify-content: center;
@@ -94,7 +101,7 @@
             padding-bottom: 3px;
             border-bottom: 1.5px solid #000;
         }
-
+        
         .summary {
             font-size: 10pt;
             line-height: 1.4;
@@ -169,38 +176,6 @@
             margin-bottom: 2px;
         }
         
-        .volunteer-section {
-            margin-bottom: 18px;
-        }
-        
-        .volunteer-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 3px;
-        }
-        
-        .volunteer-title {
-            font-size: 11pt;
-            font-weight: bold;
-        }
-        
-        .volunteer-org {
-            font-size: 10pt;
-            font-style: normal;
-            margin-bottom: 5px;
-        }
-        
-        .volunteer-description ul {
-            margin-left: 20px;
-            margin-top: 5px;
-        }
-        
-        .volunteer-description li {
-            margin-bottom: 4px;
-            font-size: 10pt;
-            line-height: 1.4;
-        }
-        
         .certifications-list {
             display: flex;
             flex-direction: column;
@@ -247,8 +222,7 @@
         @media (max-width: 768px) {
             body { padding: 20px; }
             .job-header,
-            .education-header,
-            .volunteer-header { flex-direction: column; }
+            .education-header { flex-direction: column; }
             .job-duration,
             .education-date { margin-top: 2px; }
         }
@@ -261,7 +235,9 @@
             <span>480-253-8544</span>
             <span>mike.akey6@gmail.com</span>
             <span>Scottsdale, AZ</span>
+            <span>Open to relocation</span>
         </div>
+        <div class="headline">Senior Product Manager at Alteryx</div>
     </div>
 
     <nav class="navigation">
@@ -271,19 +247,18 @@
 
     <div class="section">
         <h2 class="section-title">Professional Summary</h2>
-        <p class="summary">Product manager with 10+ years at Alteryx across Product Management, UX, Customer Support, and Product Content. Owns roadmap strategy for Designer Desktop and Alteryx One platform integration, with experience in SaaS, AI-assisted workflows, Agile delivery, stakeholder alignment, and data-driven product decisions.</p>
+        <p class="summary">Product manager with 12 years at Alteryx across product management, UX, customer support, and product content. I lead roadmap strategy for Designer Desktop and its integration with the Alteryx One platform. My work covers SaaS platform products, AI-assisted workflows, Agile delivery, and product decisions based on customer feedback and usage data.</p>
     </div>
 
     <div class="section">
         <h2 class="section-title">Skills</h2>
         <div class="skills-section">
-            <strong>Product Management:</strong> Product Strategy, Roadmap Development, Product Discovery, Requirements Definition, Product Lifecycle Management, Go-to-Market Strategy, Pricing & Packaging, Stakeholder Alignment, Executive Communication<br>
-            <strong>Platform & SaaS:</strong> SaaS Products, Platform Integrations, Marketplace Add-Ons, Cloud Execution, User Adoption, Customer Feedback, Cross-Functional Team Leadership<br>
-            <strong>Agile & Delivery:</strong> Agile, Scrum, Kanban, Sprint Planning, Backlog Management, Aha!, Asana, Jira, GitHub, GitLab, Smartsheet<br>
-            <strong>Analytics & Data:</strong> Alteryx One, Power BI, Tableau, Google Analytics, KPI Ownership, Metrics Definition, Telemetry, SQL, APIs, ETL Concepts<br>
-            <strong>User Research & Design:</strong> Customer Discovery, User Research, A/B Testing, Experiment Design, Figma, InVision, Adobe Creative Suite, Lucidchart<br>
-            <strong>AI & Productivity Tools:</strong> AI-Assisted Product Discovery, AI-Assisted Prototyping, ChatGPT, Codex, Claude, Cursor, Gemini, NotebookLM, Perplexity<br>
-            <strong>Business Systems:</strong> Salesforce, SharePoint, Quip
+            <div class="skill-category"><span class="skill-title">Product Management</span>Product Strategy, Roadmap Development, Product Discovery, Requirements Definition, Product Lifecycle Management, Go-to-Market Strategy, Pricing and Packaging, Stakeholder Alignment, Executive Communication</div>
+            <div class="skill-category"><span class="skill-title">Platform and SaaS</span>SaaS Products, Platform Integrations, Marketplace Add-Ons, Cloud Execution, User Adoption, Customer Feedback, Cross-Functional Team Leadership</div>
+            <div class="skill-category"><span class="skill-title">Delivery</span>Agile, Scrum, Kanban, Sprint Planning, Backlog Management, Jira, GitHub</div>
+            <div class="skill-category"><span class="skill-title">Analytics and Data</span>Power BI, Tableau, Google Analytics, KPI Ownership, Metrics Definition, Telemetry, SQL, APIs, ETL Concepts</div>
+            <div class="skill-category"><span class="skill-title">User Research and Design</span>Customer Discovery, User Research, A/B Testing, Experiment Design, Figma</div>
+            <div class="skill-category"><span class="skill-title">AI Tools</span>AI-Assisted Product Discovery, AI-Assisted Prototyping, Claude Code, Claude, Codex, Muse</div>
         </div>
     </div>
     
@@ -293,21 +268,22 @@
         <div class="job">
             <div class="job-header">
                 <div>
-                    <div class="job-title">Senior Product Manager - Designer Canvases | Product Manager - Designer Desktop</div>
+                    <div class="job-title">Senior Product Manager, Designer Canvases</div>
                     <div class="job-company">Alteryx</div>
-                    <div class="job-location">Remote - AZ</div>
+                    <div class="job-location">Remote, AZ</div>
                 </div>
                 <div class="job-duration">July 2022 - Present</div>
             </div>
             <div class="job-description">
                 <ul>
-                    <li>Own product strategy and roadmap for Designer Desktop and its integration with the Alteryx One platform, delivering 34 features across 10 major releases.</li>
-                    <li>Delivered Designer Desktop's first cloud execution capability, enabling desktop-built assets to run in a cloud environment through Alteryx One.</li>
-                    <li>Delivered Designer's first Alteryx One cloud-based dataset support, connecting governed datasets for end-to-end read/write access across relational and file-based sources.</li>
-                    <li>Integrated AI-assisted workflows into product discovery, prototyping, requirements development, and UX exploration, reducing research and documentation cycle time while improving iteration speed.</li>
-                    <li>Led development of Marketplace Add-Ons, simplifying access to third-party data connectors and achieving a 93% satisfaction rating with 20% month-over-month growth in feature adoption.</li>
-                    <li>Modernized Designer's legacy notification and alerting system so future releases can add user engagement workflows without rebuilding the core service.</li>
-                    <li>Partnered across Product, Finance, Marketing, and Sales to launch a new pricing and packaging strategy supporting the Alteryx One platform transition.</li>
+                    <li>Led Marketplace Add-Ons, simplifying access to third-party data connectors. It reached 93% satisfaction with 20% month-over-month growth in feature adoption.</li>
+                    <li>Delivered Designer Desktop's first cloud execution capability, so desktop-built assets can run in a cloud environment through Alteryx One.</li>
+                    <li>Delivered Designer's first Alteryx One cloud-based dataset support, connecting governed datasets for read and write access across relational and file-based sources.</li>
+                    <li>Lead the One Designer prototype, a strategic proof of concept that embeds Designer into the Alteryx One app as one experience across desktop, browser, and cloud.</li>
+                    <li>Own product strategy and roadmap for Designer Desktop and its integration with the Alteryx One platform.</li>
+                    <li>Use AI tools daily to develop, prototype, and research. It shortens the loop from an idea to something testable and has cut research and documentation cycle time.</li>
+                    <li>Modernized Designer's legacy notification and alerting system, so future releases can add user engagement workflows without rebuilding the core service.</li>
+                    <li>Partnered with Product, Finance, Marketing, and Sales on a new pricing and packaging strategy for the Alteryx One platform transition.</li>
                 </ul>
             </div>
         </div>
@@ -315,18 +291,17 @@
         <div class="job">
             <div class="job-header">
                 <div>
-                    <div class="job-title">Senior Program Manager - User Experience</div>
+                    <div class="job-title">Senior Program Manager, User Experience</div>
                     <div class="job-company">Alteryx</div>
-                    <div class="job-location">Remote - AZ</div>
+                    <div class="job-location">Remote, AZ</div>
                 </div>
                 <div class="job-duration">May 2020 - July 2022</div>
             </div>
             <div class="job-description">
                 <ul>
-                    <li>Led migration of 50+ UX and shared services team members from Rally to Jira, building automated migration workflows using Designer and APIs. Delivered the initiative ahead of broader organizational migrations, eliminating external vendor costs and establishing a scalable project management foundation.</li>
-                    <li>Served as interim Product Manager for key initiatives, including Designer Desktop FIPS (2022) and Core Experience MUI components (2020-2021), driving delivery of required platform features.</li>
-                    <li>Led UX integration efforts for acquired products and acted as subject matter expert for both Alteryx and Trifacta platforms, improving design consistency across the suite.</li>
-                    <li>Partnered with Product and UX leadership to scope initiatives, analyze usage data to inform design strategy, and deliver internal training on product knowledge and processes.</li>
+                    <li>Led the migration of 50+ UX and shared services team members from Rally to Jira, building automated migration workflows with Designer and APIs. Finished ahead of the wider company migration, with no external vendor cost.</li>
+                    <li>Served as interim Product Manager for Designer Desktop FIPS compliance (2022) and the design system (2020-2021).</li>
+                    <li>Led UX integration for acquired products and acted as subject matter expert for Alteryx and Trifacta.</li>
                 </ul>
             </div>
         </div>
@@ -334,18 +309,18 @@
         <div class="job">
             <div class="job-header">
                 <div>
-                    <div class="job-title">Technical Product Manager - Tech Writing</div>
+                    <div class="job-title">Technical Product Manager, Tech Writing</div>
                     <div class="job-company">Alteryx</div>
-                    <div class="job-location">Remote - AZ</div>
+                    <div class="job-location">Remote, AZ</div>
                 </div>
                 <div class="job-duration">October 2018 - May 2020</div>
             </div>
             <div class="job-description">
                 <ul>
-                    <li>Led cross-functional coordination between Product, Engineering, Tech Writing, and Customer teams to drive end-to-end feature delivery aligned with the product roadmap.</li>
-                    <li>Prioritized and managed the tech writing backlog, accepting user stories, and ensuring timely, high-quality documentation across multiple product areas.</li>
-                    <li>Owned and analyzed telemetry and usage data for Help content and in-product samples, using insights to inform strategic content and product decisions.</li>
-                    <li>Automated documentation workflows and supported PCM teams with content creation and sample content delivery.</li>
+                    <li>Coordinated Product, Engineering, Tech Writing, and Customer teams to deliver features end to end, aligned with the roadmap.</li>
+                    <li>Prioritized and managed the tech writing backlog and user stories, keeping documentation timely and high quality across product areas.</li>
+                    <li>Owned telemetry and usage data for Help content and in-product samples, and used it to guide content and product decisions.</li>
+                    <li>Automated documentation workflows and supported product content teams with content and sample delivery.</li>
                 </ul>
             </div>
         </div>
@@ -355,15 +330,15 @@
                 <div>
                     <div class="job-title">Product Content Manager</div>
                     <div class="job-company">Alteryx</div>
-                    <div class="job-location">Remote - AZ</div>
+                    <div class="job-location">Remote, AZ</div>
                 </div>
                 <div class="job-duration">May 2017 - October 2018</div>
             </div>
             <div class="job-description">
                 <ul>
-                    <li>Created and launched 100+ interactive learning workflows used thousands of times per month, helping customers accelerate onboarding and improve adoption of core Designer functionality.</li>
-                    <li>Partnered with Product, UX, Engineering, and Tech Writing teams to design clear, well-documented product experiences.</li>
-                    <li>Supported global content strategy through localization efforts across eight languages and reviewed Alteryx Starter Kits for quality and clarity.</li>
+                    <li>Created and launched 100+ interactive learning workflows, used thousands of times per month. They helped customers onboard faster and adopt core Designer features.</li>
+                    <li>Partnered with Product, UX, Engineering, and Tech Writing to design clear, well-documented product experiences.</li>
+                    <li>Supported localization across eight languages and reviewed Alteryx Starter Kits for quality and clarity.</li>
                 </ul>
             </div>
         </div>
@@ -373,15 +348,15 @@
                 <div>
                     <div class="job-title">Senior Customer Support Engineer</div>
                     <div class="job-company">Alteryx</div>
-                    <div class="job-location">Chicago, IL/Remote - AZ</div>
+                    <div class="job-location">Chicago, IL / Remote, AZ</div>
                 </div>
                 <div class="job-duration">March 2014 - May 2017</div>
             </div>
             <div class="job-description">
                 <ul>
-                    <li>Resolved complex technical issues across Alteryx products, collaborating cross-functionally to identify bugs and deliver timely solutions.</li>
-                    <li>Automated ticket assignment and improved onboarding and training processes for new support hires.</li>
-                    <li>Mentored support engineers and authored knowledge base content that helped users solve common product issues.</li>
+                    <li>Resolved complex technical issues across Alteryx products, working directly with customers and across teams to find bugs and deliver solutions.</li>
+                    <li>Automated ticket assignment and improved onboarding and training for new support hires.</li>
+                    <li>Mentored support engineers and wrote knowledge base content for common product issues.</li>
                 </ul>
             </div>
         </div>
@@ -397,9 +372,9 @@
             </div>
             <div class="job-description">
                 <ul>
-                    <li>Created advanced maps using demographic, geographic, and market data to support sales and strategic decision-making.</li>
-                    <li>Collaborated with sales and leadership to gather requirements, analyze large datasets, and present insights through GIS tools and visualizations.</li>
-                    <li>Maintained market data assets and used Adobe Illustrator and Photoshop to improve the clarity of client deliverables.</li>
+                    <li>Created maps using demographic, geographic, and market data to support sales and strategic decisions.</li>
+                    <li>Worked with sales and leadership to gather requirements, analyze large datasets, and present findings through GIS tools.</li>
+                    <li>Maintained market data assets and used Adobe Illustrator and Photoshop to improve client deliverables.</li>
                 </ul>
             </div>
         </div>
@@ -412,7 +387,7 @@
                 <div class="education-school">Arizona State University</div>
                 <div class="education-date">August 2013</div>
             </div>
-            <div class="degree">Masters of Advanced Study in GIS</div>
+            <div class="degree">Master of Advanced Study in GIS</div>
         </div>
         <div class="education-item">
             <div class="education-header">
@@ -428,36 +403,12 @@
         <h2 class="section-title">Certifications</h2>
         <div class="certifications-list">
             <div class="cert-item">
-                <span class="cert-name">Alteryx Designer Core Certification</span>
-                <span class="cert-exp">Expired March 2026</span>
-            </div>
-            <div class="cert-item">
                 <span class="cert-name">Certified Scrum Product Owner (CSPO)</span>
                 <span class="cert-exp">Expires February 2027</span>
             </div>
             <div class="cert-item">
                 <span class="cert-name">Product Content Management (PCM) Level 1</span>
                 <span class="cert-exp">Issued July 2022</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="section">
-        <h2 class="section-title">Volunteer Work</h2>
-        <div class="volunteer-section">
-            <div class="volunteer-header">
-                <div>
-                    <div class="volunteer-title">MAS-GIS Capstone Group Project for St. Mary's Food Bank</div>
-                    <div class="volunteer-org">Phoenix, AZ</div>
-                </div>
-                <div class="job-duration">September 2012 - August 2013</div>
-            </div>
-            <div class="volunteer-description">
-                <ul>
-                    <li>Built a geodatabase by integrating tabular data and shapefiles to support service planning and delivery.</li>
-                    <li>Developed an automated tool using ModelBuilder to identify underserved areas in need of food bank services.</li>
-                    <li>Created a web mapping application for the organization's website, enabling users to easily locate nearby food resources.</li>
-                </ul>
             </div>
         </div>
     </div>
